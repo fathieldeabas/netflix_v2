@@ -1,0 +1,14 @@
+.sectionclass{
+    .row{
+        align-items: center;
+        background-color: black;
+        color: white;
+        justify-content: space-around;
+        .colcontetnt{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

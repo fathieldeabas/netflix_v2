@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,gBADY,CACZ,IAAI,CAAA;EACA,WAAW,EAAE,MAAM;EACnB,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;EACZ,eAAe,EAAE,YAAY;CAQhC;;AAbL,AAOQ,gBAPQ,CACZ,IAAI,CAMA,YAAY,CAAA;EACR,KAAK,EAAE,IAAI;CAId;;AAZT,AASY,gBATI,CACZ,IAAI,CAMA,YAAY,CAER,GAAG,CAAA;EACC,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "sectionreverse.scss"
+    ],
+    "names": [],
+    "file": "sectionreverse.css"
+}

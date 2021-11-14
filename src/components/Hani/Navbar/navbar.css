@@ -1,0 +1,5 @@
+.navbar-expand-lg{
+    /* background-color: #000000e0; */
+    background: #141414;
+    background: linear-gradient(180deg,#141414a6 0%, rgba(0,0,0,0) 100%);
+}

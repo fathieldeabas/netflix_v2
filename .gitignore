@@ -1,0 +1,10 @@
+/node_modules
+# hani exceptions
+/Backup
+src/components/Cards
+# src/components/Footer
+src/components/Post
+src/components/Slider
+src/pages/Users
+src/pages/UserDetails
+src/Images

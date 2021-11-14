@@ -1,0 +1,43 @@
+.myfooter {
+    background-color: rgb(25, 27, 27);
+    color: rgb(117, 115, 110);
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.mylist{
+    list-style: none;
+    display: block;
+}
+
+/* .mylist li:first-child {
+    color: floralwhite;
+} */
+
+.youtube {
+    /* color: red; */
+    font-size: 35px;
+    margin: 10px;
+    margin-left: 41px;
+}
+
+.facebook {
+    /* color: blue; */
+    font-size: 28px;
+    margin: 10px;
+}
+
+.icos{
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+a{
+    color: #777;
+}
+
+.stamp{
+    margin: 0 21px;
+}

@@ -1,0 +1,18 @@
+.section-reverse .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  color: white;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.section-reverse .row .colcontetnt {
+  width: 100%;
+}
+
+.section-reverse .row .colcontetnt img {
+  width: 100%;
+}
+/*# sourceMappingURL=sectionreverse.css.map */
