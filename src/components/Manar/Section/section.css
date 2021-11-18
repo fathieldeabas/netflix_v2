@@ -1,3 +1,7 @@
+.sectionclass {
+  margin: 50px auto;
+}
+
 .sectionclass .row {
   -webkit-box-align: center;
       -ms-flex-align: center;

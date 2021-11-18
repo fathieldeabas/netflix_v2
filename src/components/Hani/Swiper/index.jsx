@@ -1,82 +1,83 @@
-// importing every-Fuckin-where
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from 'swiper';
-import 'swiper/swiper-bundle.css';
-import './styles.css';
+// import React, { useRef, useState } from "react";
+// Import Swiper React components
+// import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react/swiper";
+import { SwiperSlide } from "swiper/react/swiper-slide";
+
+// // Import Swiper styles
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+
+import "./styles.css";
+
+// import Swiper core and required modules
+import SwiperCore, { Pagination, Navigation } from "swiper";
+
+// start my imports
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+// end my imports
+
 import img1 from "../../../files/Images/swiper1.jpg";
 import img2 from "../../../files/Images/swiper2.jpg";
 import img3 from "../../../files/Images/swiper3.jpg";
 import img4 from "../../../files/Images/swiper4.jpg";
 import img5 from "../../../files/Images/swiper5.jpg";
-// use this shit
-SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
-/* ----------------------------------------------------------------------------------- */
-// Starting function SwipeerApp
-export const SwiperApp = () => {
-  const [thumbsSwiper] = useState(null);
-  const [controlledSwiper] = useState(null);
+import img6 from "../../../files/Images/swiper6.jpg";
+import img7 from "../../../files/Images/swiper7.jpg";
+import img8 from "../../../files/Images/swiper8.jpg";
+import img9 from "../../../files/Images/swiper9.jpg";
 
-// get potos from API
-/*
-  const slides = [];
-  for (let i = 0; i < 20; i += 1) {
-    slides.push(
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
 
-      <SwiperSlide key={`slide-${i}`} tag="li">
-        <img
-          src={`https://picsum.photos/id/${i + 1}/500/300`}
-          style={{ listStyle: 'none' }}
-          alt={`Slide ${i}`}
-        />
-      </SwiperSlide>
-
-    );
-  }
-*/
-
+export const App = () => {
   return (
     <>
-    <div className="row">
-        <div className="col col-sm-12">
-            <h3>Trending</h3>
-        </div>
-    </div>
-
-    <div className="col col-sm-12 mg-0 p-0">
-      <Swiper
-        id="main"
-        thumbs={{ swiper: thumbsSwiper }}
-        controller={{ control: controlledSwiper }}
-        tag="section"
-        wrapperTag="ul"
-        navigation
-        pagination
-        spaceBetween={0}
+    <div className="container-fluid" style={{margin:'50px auto',background: '#191b1b' }}>
+    <h3 style={{ color: "white",margin:'10px' }}>Trending Videos</h3>
+    <Swiper
         slidesPerView={6}
-        onInit={(swiper) => console.log('Swiper initialized!', swiper)}
-        onSlideChange={(swiper) => {
-          console.log('Slide index changed to: ', swiper.activeIndex);
+        spaceBetween={5}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
         }}
-        onReachEnd={() => console.log('Swiper end reached')}
+        navigation={true}
+        className="mySwiper"
       >
-        {/* {slides} */}
-            <SwiperSlide className='swiperimg' tag="li"><img src={img1} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img2} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img3} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img4} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img5} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img1} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img2} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img3} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img4} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-            <SwiperSlide className='swiperimg' tag="li"><img src={img5} style={{ listStyle: 'none' }} alt=""/></SwiperSlide> 
-       
+        <SwiperSlide>
+          <img src={img1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img2} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img3} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img4} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img5} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img6} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img7} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img8} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={img9} alt="" />
+        </SwiperSlide>
       </Swiper>
       </div>
-
     </>
   );
-}
-
-export default SwiperApp;
+};

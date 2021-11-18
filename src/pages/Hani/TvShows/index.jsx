@@ -4,14 +4,11 @@ import { App } from "../../../components/Hani/Swiper";
 import { Footer } from '../../../components/Manar/Footer';
 
 
-export const HomeIn = () => {
+export const TvShows = () => {
     return (
         <>
             <Navbar />
             <Landing />
-            <App />
-            <App />
-            <App />
             <App />
             <Footer />
         </>

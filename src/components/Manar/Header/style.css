@@ -1,0 +1,36 @@
+.myheader {
+    background: url("../../../files/Images/b3.jpg");
+    background-size:cover;
+    background-position:top;
+    /* background: cover; */
+    background-repeat: no-repeat;
+    overflow: hidden;
+    /* width: 1098px; */
+    width: 100%;
+    height:550px;
+    padding: 0;
+    /* margin: 0 auto 150px; */
+}
+
+.internal{
+    padding-top: 150px;
+    margin: auto;
+    text-align: center;
+}
+.internal .p1 p{
+    color: white;
+    margin: auto;
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.internal .p2 p{
+    color: white;
+    font-size: 30;
+    margin: auto;
+}
+
+.p1,
+.p2{
+    margin: 30px auto;
+}
