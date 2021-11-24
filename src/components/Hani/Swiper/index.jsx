@@ -29,6 +29,8 @@ import img7 from "../../../files/Images/swiper7.jpg";
 import img8 from "../../../files/Images/swiper8.jpg";
 import img9 from "../../../files/Images/swiper9.jpg";
 
+// import { CardPhoto } from './../CardPhoto/index';
+
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 

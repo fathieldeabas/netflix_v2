@@ -1,7 +1,6 @@
 import { Route, Redirect, Switch } from "react-router-dom";
 import { HomeIn } from "./pages/Hani/Home";
 import { HomeOut } from "./pages/Manar/HomeOut";
-
 // import{Login} from "./pages/Fathi/Login/index.jsx"
 import { Movies } from './pages/Hani/Movies/index';
 import { TvShows } from './pages/Hani/TvShows/index';
