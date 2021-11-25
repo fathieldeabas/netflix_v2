@@ -2,10 +2,12 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import { HomeIn } from "./pages/Hani/Home";
 import { HomeOut } from "./pages/Manar/HomeOut";
 import{Login} from "./pages/Fathi/Login/index.jsx"
+import{SignUp} from "./pages/Fathi/  signup/index"
 import { Movies } from './pages/Hani/Movies/index';
 import { TvShows } from './pages/Hani/TvShows/index';
 import { TermsOfUse } from "./pages/Hani/TermsOfUse";
 import { ProtectedRoute } from "./components/Fathi/protectedroute/index";
+
 
 
 export const App = () => {
@@ -24,9 +26,9 @@ export const App = () => {
           <TvShows />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/terms">
+        <Route path="/terms">
           <TermsOfUse />
-        </ProtectedRoute>
+        </Route>
         
         <Route path="/homeout">
           <HomeOut />
@@ -35,6 +37,9 @@ export const App = () => {
         <Route path="/login">
           <Login/>
         </Route> 
+        <Route path="/signup">
+          <SignUp/>
+        </Route>
 
         <ProtectedRoute path="/">
           <Redirect to="/homein" />

@@ -6,17 +6,19 @@ import { Inputuser } from "../../../components/Fathi/LoginInput/index";
 import { FooterSec } from "../../../components/Fathi/FooterSec/index";
 import img1 from "../../../files/Images/icon.png";
 
-export const Login = () => {
+export const SignUp = () => {
   let lin = "www.google.com";
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [isValidCred, setIsValidCred] = useState(true);
+  const [confirm_password, set_confirm_Password] = useState();
+  const [name, setName] = useState();
   const history = useHistory();
 
   const authContext = useContext(AuthContext);
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (authContext.login(email, password)) {
+    if (authContext.login(email, password) && password === confirm_password) {
       history.replace("/homein");
     }
     else setIsValidCred(false);
@@ -26,8 +28,16 @@ export const Login = () => {
       <div className="wrapp">
         <div className="login_body">
           <div className="login_box">
-            <h1>Sign in</h1>
+            <h1>SignUp</h1>
             <form onSubmit={handleSubmit}>
+            <div className="input-wrap">
+                <Inputuser
+                  type=""
+                  placeholder="User Name"
+                  value={name}
+                  setValue={setName}
+                />
+              </div>
               <div className="input-wrap">
                 <Inputuser
                   type="email"
@@ -45,39 +55,23 @@ export const Login = () => {
                 />
               </div>
               <div className="input-wrap">
+                <Inputuser
+                  type="password"
+                  placeholder=" confirm Password"
+                  value={confirm_password}
+                  setValue={set_confirm_Password}
+                />
+              </div>
+              <div className="input-wrap">
                 {!isValidCred && (
                   <div className="alert alert-danger">
-                    Invalid login credentials
+                    Invalid SignUp credentials
                   </div>
                 )}
-                <button type="submit">Log-in</button>
-              </div>
-              <div className="support">
-                <div className="remember">
-                  <span>
-                    {" "}
-                    <input type="checkbox"></input>
-                  </span>
-                  <span> Remember me</span>
-                </div>
-                <div>Need help ?</div>
+                <button type="submit">SignUp</button>
               </div>
               <div className="login_footer">
-                <div className="login_facebook">
-                  <span>
-                    <img src={img1} alt=""></img>
-                  </span>
-                  <span>
-                    <a href={lin}>login with facebook</a>
-                  </span>
-                </div>
-                <div className="sign-up">
-                  <p>
-                    {" "}
-                    new to netflex?<NavLink className="navbar-brand" to="/signup">Sign up now.</NavLink>
-                  </p>
-                </div>
-                <div className="terms">
+              <div className="terms">
                   <p>
                     {" "}
                     this page is protected by Google to ensure you are not a bot{" "}
