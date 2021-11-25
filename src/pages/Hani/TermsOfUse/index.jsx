@@ -1,5 +1,5 @@
 import { Navbar } from "../../../components/Hani/Navbar";
-import { Footer } from "../../../components/Manar/Footer";
+import { FooterInner } from "../../../components/Manar/FooterInner";
 
 export const TermsOfUse = () => {
   return (
@@ -314,7 +314,7 @@ export const TermsOfUse = () => {
         <p>Last Updated: November 2, 2021</p>
       </div>
 
-      <Footer />
+      <FooterInner />
       </div>
     </>
   );

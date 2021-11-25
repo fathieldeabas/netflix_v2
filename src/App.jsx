@@ -16,9 +16,9 @@ export const App = () => {
           <HomeIn />
         </ProtectedRoute>
 
-        <Route path="/movies">
+        <ProtectedRoute path="/movies">
           <Movies />
-        </Route>
+        </ProtectedRoute>
 
         <ProtectedRoute path="/tvshows">
           <TvShows />
@@ -36,9 +36,9 @@ export const App = () => {
           <Login/>
         </Route> 
 
-        <Route path="/">
+        <ProtectedRoute path="/">
           <Redirect to="/homein" />
-        </Route>
+        </ProtectedRoute>
 
         
 

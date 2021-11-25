@@ -1,9 +1,9 @@
-import "./style.css";
+import "./header.css";
 
 export const Header = (props) => {
   return (
     <>
-      <div className="myheader" style={{ color: "white" }}>
+      <div id='Header'  className="myheader">
         <div className="internal">
 
           <div className="p1">
@@ -17,8 +17,8 @@ export const Header = (props) => {
               <p>Watch on smart TVs and PlayStations</p>
           </div>
 
-          <div class="input-group mb-3 container col-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
+          <div class="input-group mb-3 container col-sm-8 col-lg-5">
+            <input type="email" class="form-control" placeholder="Email Adress" aria-label="Recipient's username" aria-describedby="button-addon2" />
             <button class="btn btn-danger" type="button" id="button-addon2">Start</button>
           </div>
 

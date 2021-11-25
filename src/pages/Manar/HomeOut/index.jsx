@@ -1,10 +1,11 @@
 import { Section } from "../../../components/Manar/Section";
+import { Questions } from "../../../components/Manar/Questions";
 import { SectionReverse } from "../../../components/Manar/SectionReverse";
-import './style.css'
 import {Header} from "../../../components/Manar/Header";
-import {Footer} from "../../../components/Manar/FooterBlack";
+import {FooterInnerBlack} from "../../../components/Manar/FooterInnerBlack";
 
 export const HomeOut = () => {
+    document.body.style.background = 'black';
     return (
         <>
             <Header/>
@@ -17,8 +18,10 @@ export const HomeOut = () => {
             <hr style={{height:'7px',backgroundColor:'#191b1b',margin:'0'}}/>
             <SectionReverse />
             <hr style={{height:'7px',backgroundColor:'#191b1b',margin:'0'}}/>
-            <Footer />
+            <Questions />
             
+            <hr style={{height:'7px',backgroundColor:'#191b1b',margin:'0'}}/>
+            <FooterInnerBlack />
         </>
     )
 }

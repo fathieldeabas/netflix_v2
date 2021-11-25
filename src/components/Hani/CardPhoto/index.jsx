@@ -1,14 +1,48 @@
-// export const CardPhoto = (input) => {
-//     return (
-//       <>
-//         <div class="card" style="width: 18rem;">
-//             <img src={input} class="card-img-top" alt="..."/>
-//         <div class="card-body">
-//             <h5 class="card-title">Card title</h5>
-//             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//             <a href="#" class="btn btn-primary">Go somewhere</a>
-//         </div>
-//         </div>
-//       </>
-//     )
-// }
+import { FaPlayCircle } from "react-icons/fa";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { IoIosArrowDropdown } from "react-icons/io";
+import { BsDot } from "react-icons/bs";
+import img1 from "../../../files/Images/swiper1.jpg";
+import './cardphoto.css'
+
+
+export const CardPhoto = (props) => {
+  let icoColor = '#d6d4d4'
+  return (
+    <>
+      <div id='CardPhoto' class="card">
+        <img src={props.src} class="card-img-top" alt="" />
+
+        <div class="card-body">
+        <div className='row' >
+
+          <div className="col1 col-6" >
+            <FaPlayCircle size='35px' style={{ color: icoColor }} />
+            <AiOutlinePlusCircle size='40px' style={{ color: icoColor }} />
+          </div>
+
+          <div className="col2 col-6" >
+            <IoIosArrowDropdown size='40px' style={{ color: icoColor }} />
+          </div>
+
+        </div>
+
+          <div className='line1' >
+            <p className='match'>90% Matchs</p>
+            <p className='age'>16+</p>
+            <p>1 Season</p>
+            <p className='quality'>HD</p>
+          </div>
+
+          <div className='line2'>
+            <p>Cat1</p>
+            <BsDot />
+            <p>Cat1</p> 
+            <BsDot />
+            <p>Cat1</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};

@@ -5,7 +5,7 @@ import "./landing.css";
 export const Landing = () => {
   return (
     <>
-    <div className="return">
+    <div id='Landing' className="return">
       {/* <video src={go} alt="" autoPlay></video> */}
       <img src='https://data.whicdn.com/images/350713273/original.jpg' alt="" className="background" />
       {/* <img src='https://1.bp.blogspot.com/-xfGyzaWzZJg/YBFvlTRvECI/AAAAAAAAKSg/iyQQhyrClVobus_-Lk-yKaGtaiusRQ8vgCLcBGAsYHQ/s2048/smSbK5cd8T9XHcxEUcems23BDEF.jpg' alt="" className="background" /> */}
