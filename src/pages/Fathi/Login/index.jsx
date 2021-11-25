@@ -1,22 +1,22 @@
 import { useContext, useState } from "react";
-import { useHistory } from "react-router";
-import { AuthContext } from "../../context/authcontext.jsx";
-import { Inputuser } from "../../component/Fathi/logininput.jsx";
-import { FooterSec } from "../../component/Fathi/footer.jsx";
-import img1 from "../../files/Images/icon.png";
+import { useHistory } from "react-router-dom";
+import { AuthContext } from "../../../Context/authcontext";
+import { Inputuser } from "../../../components/Fathi/LoginInput/index";
+import { FooterSec } from "../../../components/Fathi/FooterSec/index";
+import img1 from "../../../files/Images/icon.png";
 
 export const Login = () => {
   let lin = "www.google.com";
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [isValidCred, setIsValidCred] = useState(true);
-  // const history=useHistory();
+  const history = useHistory();
 
   const authContext = useContext(AuthContext);
   const handleSubmit = (event) => {
     event.preventDefault();
     if (authContext.login(email, password)) {
-      console.log("dahfauo");
+      history.replace("/homein");
     }
   };
   return (

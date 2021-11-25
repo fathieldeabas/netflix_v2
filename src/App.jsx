@@ -1,43 +1,46 @@
 import { Route, Redirect, Switch } from "react-router-dom";
 import { HomeIn } from "./pages/Hani/Home";
 import { HomeOut } from "./pages/Manar/HomeOut";
-// import{Login} from "./pages/Fathi/Login/index.jsx"
+import{Login} from "./pages/Fathi/Login/index.jsx"
 import { Movies } from './pages/Hani/Movies/index';
 import { TvShows } from './pages/Hani/TvShows/index';
 import { TermsOfUse } from "./pages/Hani/TermsOfUse";
+import { ProtectedRoute } from "./components/Fathi/protectedroute/index";
 
 
 export const App = () => {
   return (
     <>
         <Switch>
-        <Route path="/homein">
+        <ProtectedRoute path="/homein">
           <HomeIn />
-        </Route>
+        </ProtectedRoute>
 
         <Route path="/movies">
           <Movies />
         </Route>
 
-        <Route path="/tvshows">
+        <ProtectedRoute path="/tvshows">
           <TvShows />
-        </Route>
+        </ProtectedRoute>
 
-        <Route path="/terms">
+        <ProtectedRoute path="/terms">
           <TermsOfUse />
-        </Route>
+        </ProtectedRoute>
         
         <Route path="/homeout">
           <HomeOut />
         </Route>
 
+        <Route path="/login">
+          <Login/>
+        </Route> 
+
         <Route path="/">
           <Redirect to="/homein" />
         </Route>
 
-        {/* <Route path="/login">
-          <Login/>
-        </Route> */}
+        
 
         </Switch>
     </>
